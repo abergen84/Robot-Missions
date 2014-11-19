@@ -1,0 +1,37 @@
+*, *:before, *:after {
+        box-sizing: border-box;
+    }
+    /**
+     * GRIDS
+     */
+
+    .grid {
+        width: 100%;
+        display: block;
+        font-size: 0;
+        text-align: justify;
+        position: relative;
+    }
+    .grid > * {
+        font-size: medium;
+        text-align: left;
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+    }
+    .grid:after {
+        display: inline-block;
+        width: 100%;
+        content: "";
+        font-size: medium;
+    }
+    @media (min-width: 400px) {
+        .grid-2-400 > * {
+            width: 48%
+        }
+    }
+    @media (min-width: 600px) {
+        .grid-4-600 > * {
+            width: 24%
+        }
+    }
