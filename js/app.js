@@ -15,6 +15,8 @@
         ).then(function(){
             _.templateSettings.interpolate = /{([\s\S]+?)}/g;
 
+            document.body.style.opacity = 1;
+
             // start app?
         })
 

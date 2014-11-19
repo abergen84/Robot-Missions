@@ -4,23 +4,48 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./bower_components/typeplate-starter-kit/css/typeplate.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <title></title>
 </head>
 
-<body>
+<body style="opacity: 0;">
 
-    <div class="robots grid">
-        <h1>Robots</h1>
+    <!-- <div class="page">
+        <h1 class="header">Robots</h1>
+        <div class="robots grid">
+        </div>
+    </div> -->
+
+    <div class="page missions">
+        <h1 class="header">Mission Control</h1>
+        <div class="mission-container">
+
+            <div class="grid grid-5 centered">
+                <span>completed</span>
+                <span>location</span>
+                <span>song</span>
+                <span>dance</span>
+                <span>robot</span>
+            </div>
+
+        </div>
     </div>
-
 
     <script type="text/javascript" src="./bower_components/Loader/loader.js" id="loaderjs" data-app="./js/app.js"></script>
 
     <script type="text/template" id="robot-template">
-        <div>{name}</div>
+        <div class="robot-name"><h3>{name}</h3></div>
         <div>
             <img src="{photo}">
         </div>
+    </script>
+
+    <script type="text/template" id="mission-template">
+        <span>{(completed) ? "√" : "x"}</span>
+        <span><img src="{giphy_location_url}"></span>
+        <span><img src="{giphy_song_url}"></span>
+        <span><img src="{giphy_dance_url}"></span>
+        <span><img src="robot.photo"></span>
     </script>
 </body>
 

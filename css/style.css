@@ -1,6 +1,8 @@
 *, *:before, *:after {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
+
 /**
      * GRIDS
      */
@@ -28,6 +30,9 @@
 .grid-2 > * {
     width: 48%;
 }
+.grid-5 > * {
+    width: 19%;
+}
 @media (min-width: 400px) {
     .grid-2-400 > * {
         width: 48%
@@ -39,10 +44,40 @@
     }
 }
 
+/**
+ * generic stuff
+ */
+html {
+    background: rgb(51,51,51); /* Old browsers */
+    background-image: radial-gradient(ellipse at center,  rgba(51,51,51,1) 0%,rgba(35,35,35,1) 100%); /* W3C */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-.robots {
+body {
+    transition: opacity .25s ease;
+}
+
+h1 {
+    color: rgba(255,255,255,0.5);
+}
+
+h3 {
+    color: rgba(255,255,255,0.5);
+}
+
+
+/**
+ * robots stuff?
+ */
+
+.page {
     max-width: 600px;
     margin: 0 auto;
+}
+
+.page .header {
+    text-align: center;
 }
 
 .robots table {
@@ -52,4 +87,63 @@
 
 .robots img {
     max-width: 100%;
+    border-radius: 50%;
+}
+
+.robots .robot-name {
+    text-align: center;
+}
+
+.robot > * {
+    vertical-align: middle;
+}
+
+.centered > * {
+    text-align: center;
+}
+
+/**
+ * mission
+ */
+
+.mission {
+    margin-bottom: 1rem;
+}
+
+.mission img {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mission > * {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    animation: fadeDown .25s ease both;
+}
+
+.mission > *:after {
+    content: "";
+    padding-top: 100%;
+    display: inline-block;
+}
+
+/**
+ * keyframes
+ */
+
+@keyframes fadeDown {
+    0%{
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
