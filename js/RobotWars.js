@@ -112,6 +112,7 @@ var MissionCollection = Backbone.Collection.extend({
     }
 })
 
+
 var Giphy = Backbone.Model.extend({
     defaults: {
         url: "http://media0.giphy.com/media/DFiwMapItOTh6/giphy.gif"
