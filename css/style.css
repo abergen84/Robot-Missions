@@ -125,6 +125,10 @@ h3 {
     overflow: hidden;
     border-radius: 50%;
     animation: fadeDown .25s ease both;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 4em;
 }
 
 .mission > *:after {
@@ -146,4 +150,12 @@ h3 {
         transform: translateY(0);
         opacity: 1;
     }
+}
+/*
+#robots-container {
+    display: none;
+}*/
+
+.page {
+    display: none;
 }
